@@ -31,12 +31,9 @@ catch(err){
 }
 
 
-app.get("/", async(request, response) =>{
-  console.log("Hello");
-  response.send("hi people");
-})
 
-app.get("/", async(request, response) =>{
+
+app.get("/hi", async(request, response) =>{
   console.log("Hello");
   response.send("hi people");
 });
