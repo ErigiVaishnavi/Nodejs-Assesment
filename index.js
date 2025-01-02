@@ -36,6 +36,11 @@ app.get("/", async(request, response) =>{
   response.send("hi people");
 })
 
+app.get("/", async(request, response) =>{
+  console.log("Hello");
+  response.send("hi people");
+});
+
 app.post("/login", async (request, response) => {
   const { email, password } = request.body;
   const selectUserQuery = `SELECT * FROM UserDetails WHERE email = '${email}'`;
