@@ -23,8 +23,18 @@ const initializeDBAndServer = async () => {
     process.exit(1);
   }
 };
+try{
+  initializeDBAndServer();
+}
+catch(err){
+  console.log(err.message);
+}
 
-initializeDBAndServer();
+
+app.get("/", async(request, response) =>{
+  console.log("Hello");
+  response.send("hi people");
+})
 
 app.post("/login", async (request, response) => {
   const { email, password } = request.body;
